@@ -60,11 +60,18 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 
 const greeting = (word) => {
   // Solution code here...
+  return word.toUpperCase() + '!';
 };
 
 const speaker = (words, callback) => {
   // Solution code here...
+  let newArr = [];
+  words.forEach((str) => {
+    newArr.push(callback(str));
+  });
+  return newArr;
 };
+// speaker(arr, greeting);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -107,9 +114,26 @@ The inventory is formatted like this:
 
 This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
+let condition = true;
+if (condition) {
+  // if ture do this
+} else {
+  // if false do this
+}
+
+// WTF
+// what ture false
+// what ? true : false;
 
 const createList = (availableItems) => {
   // Solution code here...
+  let newArr = [];
+  availableItems.forEach((item) => {
+    if (item.available) {
+      newArr.push(item.name);
+    }
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
