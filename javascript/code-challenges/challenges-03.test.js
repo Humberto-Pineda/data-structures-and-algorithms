@@ -8,6 +8,7 @@ Write a function called addTwo that takes in an array and adds two to every valu
 
 const addTwo = (arr) => {
   // Solution code here...
+  return arr.map(num => num +2);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -20,6 +21,7 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 
 const typeNum = (arr) => {
   // Solution code here...
+  return arr.filter(num => typeof num === 'number');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,6 +34,7 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 
 const containsAnd = (arr) => {
   // Solution code here...
+  return arr.filter(string => string.includes('and'));
 };
 
 /* ------------------------------------------------------------------------------------------------
