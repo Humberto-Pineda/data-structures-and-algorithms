@@ -10,7 +10,9 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 
 const raisedToTheThird = (arr) => {
   // Solution code here...
-  
+  let newArr = [];
+  arr.forEach(raised => newArr.push(Math.pow(raised,3)));
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -19,9 +21,9 @@ CHALLENGE 2
 Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1.
 ------------------------------------------------------------------------------------------------ */
 
-const addOne = (arr) => {
-  // Solution code here...
-};
+// Solution code here...
+const addOne = (arr) => arr.map(r => r + 1);
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -31,6 +33,7 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 
 const addQuestion = (arr) => {
   // Solution code here...
+  arr.map(r => r + '?');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,6 +63,9 @@ Write a function named forEachTwoToThe that produces the same output as your for
 
 const forEachTwoToThe = (arr) => {
   // Solution code here...
+  let newArr = [];
+  arr.forEach(r => newArr.push(Math.pow(2,r)));
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
